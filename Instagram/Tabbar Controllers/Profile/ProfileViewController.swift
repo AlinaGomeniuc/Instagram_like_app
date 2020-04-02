@@ -25,9 +25,8 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-      collectionView.delegate = self
-      collectionView.dataSource = self
-      let nib = UINib(nibName: "ProfileCell", bundle: nil)
+      let bundle = Bundle.init(for: ProfileCell.self)
+      let nib = UINib(nibName: "ProfileCell", bundle: bundle)
       collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
@@ -61,13 +60,6 @@ class ProfileViewController: UIViewController {
     }
 }
 
-    //MARK: Flow layout delegate
-extension ProfileViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("didSelectItem at: \(indexPath)")
-    }
-}
-   
 
     //MARK: Data source
     
