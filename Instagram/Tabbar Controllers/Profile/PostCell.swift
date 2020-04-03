@@ -1,15 +1,15 @@
 //
-//  ProfileCell.swift
+//  PostCell.swift
 //  Instagram
 //
-//  Created by Alina Gomeniuc on 2/27/20.
+//  Created by Alina Gomeniuc on 4/3/20.
 //  Copyright © 2020 Alina Gomeniuc. All rights reserved.
 //
 
 import UIKit
 
-class ProfileCell: UICollectionViewCell {
-    
+class PostCell: UICollectionViewCell {
+
     @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

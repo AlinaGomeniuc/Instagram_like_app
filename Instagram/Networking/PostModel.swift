@@ -7,7 +7,7 @@
 //
 
 import UIKit
-struct Post: Codable {
+struct PostModel: Codable {
    let id: String
    let url: String
 }

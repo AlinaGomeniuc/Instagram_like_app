@@ -14,4 +14,13 @@ struct ProfileModel: Codable {
    let posts: String
    let followers: String
    let following: String
+    
+//    init(id: String, username: String, bio: String, posts: String, followers: String, following: String) {
+//        self.id = id
+//        self.username = username
+//        self.bio = bio
+//        self.posts = posts
+//        self.followers = followers
+//        self.following = following
+//    }
 }
