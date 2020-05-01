@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController, ProfileFeedViewDelegate {
         profileFeedPresenter.fetchProfileFeedData()
         profileFeedPresenter.fetchProfileData()
     }
+ 
     
     func showLoadingHUD() {
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -96,9 +97,7 @@ class ProfileViewController: UIViewController, ProfileFeedViewDelegate {
     }
 }
 
-
     //MARK: Data source
-    
 extension ProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return profileFeedPresenter.nrOfPosts

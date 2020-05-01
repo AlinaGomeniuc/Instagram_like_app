@@ -14,14 +14,14 @@ class ProfileService {
     func fetchProfileFeedData() -> Observable<[PostModel]> {
            let req = RequestService()
            let url = URL(string: "https://eucc.me/alina/post")
-           let urlR = URLRequest(url: url!);
+           let urlR = URLRequest(url: url!)
            return req.get(urlR).observeOn(MainScheduler.instance);
        }
     
     func fetchProfileData() -> Observable<[ProfileModel]> {
         let req = RequestService()
         let url = URL(string: "https://eucc.me/alina/profile")
-        let urlR = URLRequest(url: url!);
+        let urlR = URLRequest(url: url!)
         return req.get(urlR).observeOn(MainScheduler.instance);
     }
     

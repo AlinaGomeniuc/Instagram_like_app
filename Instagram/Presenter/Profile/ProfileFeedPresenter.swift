@@ -61,7 +61,6 @@ class ProfileFeedPresenter {
                      for element in post {
                         self.profileFeedViewDelegate?.setUsername(username: element.username)
                         self.profileFeedViewDelegate?.setBio(bioInfo: element.bio)
-                        print(element.bio)
                         self.profileFeedViewDelegate?.setFolowingNr(folowingNr: element.following)
                         self.profileFeedViewDelegate?.setFolowersNr(folowersNr: element.followers)
                         self.profileFeedViewDelegate?.setPostNr(postNr: element.posts)
