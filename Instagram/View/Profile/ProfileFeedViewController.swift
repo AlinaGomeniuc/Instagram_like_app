@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController, ProfileFeedViewDelegate {
     
     func showLoadingHUD() {
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        hud.label.text = "Loading..."
+        hud.label.text = "Loading..." 
     }
 
     func hideLoadingHUD() {

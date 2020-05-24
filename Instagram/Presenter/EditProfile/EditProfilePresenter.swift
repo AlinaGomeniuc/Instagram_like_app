@@ -10,10 +10,10 @@ import Foundation
 import RxSwift
 
 class EditProfilePresenter {
-    private let profileService : ProfileService
+    private let profileService : EditProfileServiceProtocol
     weak private var editProfileViewDelegate : EditProfileViewDelegate?
 
-    init(profileService : ProfileService){
+    init(profileService : EditProfileServiceProtocol){
         self.profileService = profileService
     }
 
@@ -31,7 +31,7 @@ class EditProfilePresenter {
                 profileService.updateBioProfileData(bioText: bio!)
             }
         }
-        if (!username!.isEmpty && !bio!.isEmpty){
+        if (!username!.isEmpty && bio!.isEmpty){
             profileService.updateUsernameProfileData(usernameText: username!)
             }
         }

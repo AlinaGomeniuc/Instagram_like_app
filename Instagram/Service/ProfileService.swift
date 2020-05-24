@@ -9,7 +9,13 @@
 import Foundation
 import RxSwift
 
-class ProfileService {
+protocol EditProfileServiceProtocol {
+    func updateProfileData(usernameText: String, bioText: String)
+    func updateBioProfileData(bioText: String)
+    func updateUsernameProfileData(usernameText: String)
+}
+
+class ProfileService: EditProfileServiceProtocol {
     
     func fetchProfileFeedData() -> Observable<[PostModel]> {
            let req = RequestService()

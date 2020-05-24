@@ -11,6 +11,9 @@
 		C70ED7DD24371F8D0066FADA /* UserFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED7DB24371F8D0066FADA /* UserFeedCell.swift */; };
 		C70ED7DE24371F8D0066FADA /* UserFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70ED7DC24371F8D0066FADA /* UserFeedCell.xib */; };
 		C70ED7E0243724A50066FADA /* UserFeedCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED7DF243724A50066FADA /* UserFeedCellModel.swift */; };
+		C715B33F24771D330051503D /* EditProfilePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C715B33E24771D330051503D /* EditProfilePresenterTest.swift */; };
+		C716C035247962E200CC2B42 /* EditProfileViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C716C034247962E200CC2B42 /* EditProfileViewMock.swift */; };
+		C716C03724796A8C00CC2B42 /* EditProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C716C03624796A8C00CC2B42 /* EditProfileServiceMock.swift */; };
 		C74C6880245C68A600B28A45 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C687F245C68A600B28A45 /* FeedService.swift */; };
 		C74C6885245C69F900B28A45 /* FeedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C6884245C69F900B28A45 /* FeedViewDelegate.swift */; };
 		C74C6887245C6A2200B28A45 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C6886245C6A2200B28A45 /* FeedPresenter.swift */; };
@@ -89,6 +92,9 @@
 		C70ED7DB24371F8D0066FADA /* UserFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedCell.swift; sourceTree = "<group>"; };
 		C70ED7DC24371F8D0066FADA /* UserFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserFeedCell.xib; sourceTree = "<group>"; };
 		C70ED7DF243724A50066FADA /* UserFeedCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedCellModel.swift; sourceTree = "<group>"; };
+		C715B33E24771D330051503D /* EditProfilePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenterTest.swift; sourceTree = "<group>"; };
+		C716C034247962E200CC2B42 /* EditProfileViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewMock.swift; sourceTree = "<group>"; };
+		C716C03624796A8C00CC2B42 /* EditProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileServiceMock.swift; sourceTree = "<group>"; };
 		C74C687F245C68A600B28A45 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		C74C6884245C69F900B28A45 /* FeedViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewDelegate.swift; sourceTree = "<group>"; };
 		C74C6886245C6A2200B28A45 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
@@ -192,6 +198,24 @@
 				50C1FF4A26B86FF0DA54A1FD /* Pods-Instagram.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C715B34024771D4A0051503D /* EditProfileTests */ = {
+			isa = PBXGroup;
+			children = (
+				C716C033247962C300CC2B42 /* Mocks */,
+				C715B33E24771D330051503D /* EditProfilePresenterTest.swift */,
+			);
+			path = EditProfileTests;
+			sourceTree = "<group>";
+		};
+		C716C033247962C300CC2B42 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C716C034247962E200CC2B42 /* EditProfileViewMock.swift */,
+				C716C03624796A8C00CC2B42 /* EditProfileServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		C74C6881245C68C400B28A45 /* Feed */ = {
@@ -336,6 +360,7 @@
 		C78ED39B2401CDE600A0CAC2 /* InstagramTests */ = {
 			isa = PBXGroup;
 			children = (
+				C715B34024771D4A0051503D /* EditProfileTests */,
 				C78ED39C2401CDE600A0CAC2 /* InstagramTests.swift */,
 				C78ED39E2401CDE600A0CAC2 /* Info.plist */,
 			);
@@ -705,6 +730,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C715B33F24771D330051503D /* EditProfilePresenterTest.swift in Sources */,
+				C716C03724796A8C00CC2B42 /* EditProfileServiceMock.swift in Sources */,
+				C716C035247962E200CC2B42 /* EditProfileViewMock.swift in Sources */,
 				C78ED39D2401CDE600A0CAC2 /* InstagramTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
