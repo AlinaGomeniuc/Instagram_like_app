@@ -8,7 +8,11 @@
 
 import RxSwift
 
-class ActionService {
+protocol ActionServiceProtocol {
+    func fetchActionList() -> Observable<[ActionModel]>
+}
+
+class ActionService: ActionServiceProtocol {
     
     func fetchActionList() -> Observable<[ActionModel]>{
         let req = RequestService()
