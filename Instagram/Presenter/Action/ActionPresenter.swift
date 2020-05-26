@@ -8,7 +8,7 @@
 import RxSwift
 
 class ActionPresenter {
-    private let actionService : ActionService
+    private let actionService : ActionServiceProtocol
     weak private var actionViewDelegate : ActionViewDelegate?
     
     var actionData : Array<ActionModel> = Array()
@@ -16,7 +16,7 @@ class ActionPresenter {
         return actionData.count
     }
     
-    init(actionService : ActionService){
+    init(actionService : ActionServiceProtocol){
         self.actionService = actionService
     }
     
@@ -49,10 +49,12 @@ class ActionPresenter {
                 }
     }
     
-    func configureCell(cell: ActionCell, forRow row: Int){
-        let action = actionData[row]
-        cell.displayUsername(usernameText: action.username)
-        cell.displayAction(actionText: action.action)
+    func configureCell(cell: ActionCellViewDelegate, forRow row: Int){
+        if (!actionData.isEmpty){
+            let action = actionData[row]
+            cell.displayUsername(usernameText: action.username)
+            cell.displayAction(actionText: action.action)
+        }
     }
     
 }
