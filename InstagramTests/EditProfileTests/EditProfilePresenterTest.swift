@@ -29,10 +29,14 @@ class EditProfilePresenterTest: XCTestCase {
     }
 
     func testEditBioData() {
-//        let expectation = self.expectation(description: "Editing Bio Data")
         self.editProfileViewMock = EditProfileViewMock(bio: "Test Bio")
         self.editProfilePresenter.setViewDelegate(editProfileViewDelegate: editProfileViewMock)
+        
+        let expectation = self.expectation(description: "Editing bio data successfully")
+        self.editProfileServiceMock.expectation = expectation
+        
         self.editProfilePresenter.editProfileData()
+        wait(for: [expectation], timeout: 2)
         
         XCTAssertTrue(editProfileServiceMock!.updatedBioInfo)
         XCTAssertFalse(editProfileServiceMock!.updatedAllInfo)
@@ -45,7 +49,12 @@ class EditProfilePresenterTest: XCTestCase {
     func testEditUsernameData() {
         self.editProfileViewMock = EditProfileViewMock(username: "Test Username")
         self.editProfilePresenter.setViewDelegate(editProfileViewDelegate: editProfileViewMock)
+        
+        let expectation = self.expectation(description: "Editing username data successfully")
+        self.editProfileServiceMock.expectation = expectation
+        
         self.editProfilePresenter.editProfileData()
+        wait(for: [expectation], timeout: 2)
         
         XCTAssertTrue(editProfileServiceMock!.updatedUsernameInfo)
         XCTAssertFalse(editProfileServiceMock!.updatedBioInfo)
@@ -58,7 +67,12 @@ class EditProfilePresenterTest: XCTestCase {
     func testEditAllData() {
         self.editProfileViewMock = EditProfileViewMock(bio: "Test Bio", username: "Test Username")
         self.editProfilePresenter.setViewDelegate(editProfileViewDelegate: editProfileViewMock)
+        
+        let expectation = self.expectation(description: "Editing all data successfully")
+        self.editProfileServiceMock.expectation = expectation
+        
         self.editProfilePresenter.editProfileData()
+        wait(for: [expectation], timeout: 2)
         
         XCTAssertTrue(editProfileServiceMock!.updatedAllInfo)
         XCTAssertFalse(editProfileServiceMock!.updatedUsernameInfo)
