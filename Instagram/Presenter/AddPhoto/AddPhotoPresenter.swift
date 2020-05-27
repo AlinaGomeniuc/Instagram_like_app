@@ -9,10 +9,10 @@
 import Foundation
 
 class AddPhotoPresenter {
-    private let addPhotoService : AddPhotoService
+    private let addPhotoService : AddPhotoServiceProtocol
     weak private var addPhotoViewDelegate : AddPhotoViewDelegate?
     
-    init(addPhotoService : AddPhotoService){
+    init(addPhotoService : AddPhotoServiceProtocol){
         self.addPhotoService = addPhotoService
     }
     
@@ -21,6 +21,8 @@ class AddPhotoPresenter {
     }
     
     func addUserPost(){
-        addPhotoService.addPhoto(urlPhoto: (addPhotoViewDelegate?.getUrl())!)
+        if (!(addPhotoViewDelegate?.getUrl().isEmpty)!){
+           addPhotoService.addPhoto(urlPhoto: (addPhotoViewDelegate?.getUrl())!)
+        }
     }
 }

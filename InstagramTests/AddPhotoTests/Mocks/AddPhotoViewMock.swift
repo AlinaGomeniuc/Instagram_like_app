@@ -7,3 +7,21 @@
 //
 
 import Foundation
+@testable import Instagram
+
+class AddPhotoViewMock: NSObject, AddPhotoViewDelegate {
+    var url: String
+    
+    init(url: String = ""){
+        self.url = url
+    }
+  
+    func showLoadingHUD() {}
+    func hideLoadingHUD() {}
+    
+    func getUrl() -> String {
+          return self.url
+      }
+    
+    
+}

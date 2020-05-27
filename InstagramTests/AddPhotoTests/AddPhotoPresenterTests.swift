@@ -7,27 +7,49 @@
 //
 
 import XCTest
+@testable import Instagram
 
 class AddPhotoPresenterTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var addPhotoViewMock : AddPhotoViewMock!
+    var addPhotoPresenter : AddPhotoPresenter!
+    var addPhotoServiceMock : AddPhotoServiceMock!
+    
+    override func setUp() {
+        super.setUp()
+        self.addPhotoServiceMock = AddPhotoServiceMock()
+        self.addPhotoPresenter = AddPhotoPresenter(addPhotoService: addPhotoServiceMock)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        self.addPhotoViewMock = nil
+        self.addPhotoPresenter = nil
+        self.addPhotoServiceMock = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddPostSuccess() {
+        self.addPhotoViewMock = AddPhotoViewMock(url: "https://test")
+        self.addPhotoPresenter.setViewDelegate(addPhotoViewDelegate: addPhotoViewMock)
+        
+        let expectation = self.expectation(description: "Adding post successfully")
+        self.addPhotoServiceMock.expectation = expectation
+        
+        self.addPhotoPresenter.addUserPost()
+        wait(for: [expectation], timeout: 2)
+        
+        XCTAssertTrue(addPhotoServiceMock!.addedPost)
+        XCTAssertEqual(addPhotoViewMock.getUrl(), "https://test")
+    }
+    
+    func testAddPostNoUrl() {
+        self.addPhotoViewMock = AddPhotoViewMock()
+        self.addPhotoPresenter.setViewDelegate(addPhotoViewDelegate: addPhotoViewMock)
+   
+        self.addPhotoPresenter.addUserPost()
+        
+        XCTAssertFalse(addPhotoServiceMock!.addedPost)
+        XCTAssertEqual(addPhotoViewMock.getUrl(), "")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 
 }

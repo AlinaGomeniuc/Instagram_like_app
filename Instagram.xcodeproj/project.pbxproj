@@ -57,7 +57,6 @@
 		C78ED3882401CDE200A0CAC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78ED3872401CDE200A0CAC2 /* SceneDelegate.swift */; };
 		C78ED38D2401CDE300A0CAC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78ED38B2401CDE300A0CAC2 /* Main.storyboard */; };
 		C78ED3922401CDE500A0CAC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78ED3902401CDE500A0CAC2 /* LaunchScreen.storyboard */; };
-		C78ED39D2401CDE600A0CAC2 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78ED39C2401CDE600A0CAC2 /* InstagramTests.swift */; };
 		C78ED3A82401CDE600A0CAC2 /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78ED3A72401CDE600A0CAC2 /* InstagramUITests.swift */; };
 		C78ED3BE2402956D00A0CAC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78ED3BD2402956D00A0CAC2 /* HomeViewController.swift */; };
 		C7A1A9042405CEA200BDE0AF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A9032405CEA200BDE0AF /* FeedViewController.swift */; };
@@ -72,7 +71,13 @@
 		C7C8A11E245B6A0E0014E424 /* ActionCellViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8A11D245B6A0E0014E424 /* ActionCellViewDelegate.swift */; };
 		C7CE1628247C446800EC215A /* RequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE1627247C446800EC215A /* RequestMock.swift */; };
 		C7CE162A247C542F00EC215A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE1629247C542F00EC215A /* RequestError.swift */; };
+		C7ED2F9B247F0B39001A554B /* AddPhotoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ED2F9A247F0B39001A554B /* AddPhotoPresenterTests.swift */; };
+		C7ED2F9D247F0B91001A554B /* AddPhotoViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ED2F9C247F0B91001A554B /* AddPhotoViewMock.swift */; };
+		C7ED2F9F247F0BA0001A554B /* AddPhotoServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ED2F9E247F0BA0001A554B /* AddPhotoServiceMock.swift */; };
 		C7F2883A247DA1DB000A1F39 /* ActionCellMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F28839247DA1DB000A1F39 /* ActionCellMock.swift */; };
+		C7F2883E247DB1B4000A1F39 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2883D247DB1B4000A1F39 /* FeedPresenterTests.swift */; };
+		C7F28840247DB1FC000A1F39 /* FeedViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2883F247DB1FC000A1F39 /* FeedViewMock.swift */; };
+		C7F28842247DB2A9000A1F39 /* FeedServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F28841247DB2A9000A1F39 /* FeedServiceMock.swift */; };
 		C7F41AA92406EFDA00577B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7F41AA82406EFDA00577B47 /* Assets.xcassets */; };
 		C7F41AAC2407240500577B47 /* ProfileFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F41AAB2407240500577B47 /* ProfileFeedViewController.swift */; };
 /* End PBXBuildFile section */
@@ -151,7 +156,6 @@
 		C78ED3912401CDE500A0CAC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C78ED3932401CDE500A0CAC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C78ED3982401CDE600A0CAC2 /* InstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C78ED39C2401CDE600A0CAC2 /* InstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
 		C78ED39E2401CDE600A0CAC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C78ED3A32401CDE600A0CAC2 /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78ED3A72401CDE600A0CAC2 /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
@@ -169,7 +173,13 @@
 		C7C8A11D245B6A0E0014E424 /* ActionCellViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCellViewDelegate.swift; sourceTree = "<group>"; };
 		C7CE1627247C446800EC215A /* RequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMock.swift; sourceTree = "<group>"; };
 		C7CE1629247C542F00EC215A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		C7ED2F9A247F0B39001A554B /* AddPhotoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoPresenterTests.swift; sourceTree = "<group>"; };
+		C7ED2F9C247F0B91001A554B /* AddPhotoViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewMock.swift; sourceTree = "<group>"; };
+		C7ED2F9E247F0BA0001A554B /* AddPhotoServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoServiceMock.swift; sourceTree = "<group>"; };
 		C7F28839247DA1DB000A1F39 /* ActionCellMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCellMock.swift; sourceTree = "<group>"; };
+		C7F2883D247DB1B4000A1F39 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
+		C7F2883F247DB1FC000A1F39 /* FeedViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewMock.swift; sourceTree = "<group>"; };
+		C7F28841247DB2A9000A1F39 /* FeedServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceMock.swift; sourceTree = "<group>"; };
 		C7F41AA82406EFDA00577B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7F41AAB2407240500577B47 /* ProfileFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedViewController.swift; sourceTree = "<group>"; };
 		CAA2C11CB44D7A85DD611A76 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -411,10 +421,11 @@
 		C78ED39B2401CDE600A0CAC2 /* InstagramTests */ = {
 			isa = PBXGroup;
 			children = (
+				C7ED2F98247F0B07001A554B /* AddPhotoTests */,
+				C7F2883B247DB175000A1F39 /* FeedTests */,
 				C71AD21A247B3B8F00CF2874 /* ServiceMocks */,
 				C71AD210247AF9AD00CF2874 /* ActionListTests */,
 				C715B34024771D4A0051503D /* EditProfileTests */,
-				C78ED39C2401CDE600A0CAC2 /* InstagramTests.swift */,
 				C78ED39E2401CDE600A0CAC2 /* Info.plist */,
 			);
 			path = InstagramTests;
@@ -548,6 +559,42 @@
 				C7C8A11D245B6A0E0014E424 /* ActionCellViewDelegate.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		C7ED2F98247F0B07001A554B /* AddPhotoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7ED2F99247F0B14001A554B /* Mocks */,
+				C7ED2F9A247F0B39001A554B /* AddPhotoPresenterTests.swift */,
+			);
+			path = AddPhotoTests;
+			sourceTree = "<group>";
+		};
+		C7ED2F99247F0B14001A554B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C7ED2F9C247F0B91001A554B /* AddPhotoViewMock.swift */,
+				C7ED2F9E247F0BA0001A554B /* AddPhotoServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C7F2883B247DB175000A1F39 /* FeedTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7F2883C247DB188000A1F39 /* Mocks */,
+				C7F2883D247DB1B4000A1F39 /* FeedPresenterTests.swift */,
+			);
+			path = FeedTests;
+			sourceTree = "<group>";
+		};
+		C7F2883C247DB188000A1F39 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C7F2883F247DB1FC000A1F39 /* FeedViewMock.swift */,
+				C7F28841247DB2A9000A1F39 /* FeedServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -826,13 +873,18 @@
 			files = (
 				C71AD215247AFAC400CF2874 /* ActionViewMock.swift in Sources */,
 				C7CE162A247C542F00EC215A /* RequestError.swift in Sources */,
+				C7ED2F9F247F0BA0001A554B /* AddPhotoServiceMock.swift in Sources */,
+				C7F28840247DB1FC000A1F39 /* FeedViewMock.swift in Sources */,
+				C7F28842247DB2A9000A1F39 /* FeedServiceMock.swift in Sources */,
 				C71AD213247AF9FB00CF2874 /* ActionListTest.swift in Sources */,
 				C715B33F24771D330051503D /* EditProfilePresenterTest.swift in Sources */,
 				C716C03724796A8C00CC2B42 /* EditProfileServiceMock.swift in Sources */,
+				C7ED2F9D247F0B91001A554B /* AddPhotoViewMock.swift in Sources */,
 				C71AD219247B063000CF2874 /* ResultMockService.swift in Sources */,
 				C716C035247962E200CC2B42 /* EditProfileViewMock.swift in Sources */,
+				C7F2883E247DB1B4000A1F39 /* FeedPresenterTests.swift in Sources */,
 				C7F2883A247DA1DB000A1F39 /* ActionCellMock.swift in Sources */,
-				C78ED39D2401CDE600A0CAC2 /* InstagramTests.swift in Sources */,
+				C7ED2F9B247F0B39001A554B /* AddPhotoPresenterTests.swift in Sources */,
 				C7CE1628247C446800EC215A /* RequestMock.swift in Sources */,
 				C71AD217247AFDFB00CF2874 /* ActionServiceMock.swift in Sources */,
 			);

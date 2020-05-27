@@ -9,8 +9,11 @@
 import Foundation
 import RxSwift
 
-class AddPhotoService {
-    
+protocol AddPhotoServiceProtocol {
+    func addPhoto(urlPhoto: String)
+}
+
+class AddPhotoService: AddPhotoServiceProtocol {
     func addPhoto(urlPhoto: String){
         let request = RequestService()
         let post = AddPostModel(url: urlPhoto)

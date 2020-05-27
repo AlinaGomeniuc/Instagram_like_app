@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import XCTest
+@testable import Instagram
+
+class AddPhotoServiceMock: AddPhotoServiceProtocol {
+    var addedPost = false
+    var expectation : XCTestExpectation!
+    
+    func addPhoto(urlPhoto: String){
+        self.addedPost = true
+        self.expectation.fulfill()
+    }
+    
+}
