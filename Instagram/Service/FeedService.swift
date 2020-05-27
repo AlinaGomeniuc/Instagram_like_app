@@ -9,8 +9,11 @@
 import Foundation
 import RxSwift
 
-class FeedService {
-    
+protocol FeedServiceProtocol {
+    func fetchFeedData() -> Observable<[GeneralFeedModel]>
+}
+
+class FeedService: FeedServiceProtocol {
     func fetchFeedData() -> Observable<[GeneralFeedModel]> {
         let req = RequestService()
         let url = URL(string: "https://eucc.me/alina/general_feed")
