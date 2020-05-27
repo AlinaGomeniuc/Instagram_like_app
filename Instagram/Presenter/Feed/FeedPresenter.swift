@@ -9,7 +9,7 @@
 import Foundation
 
 class FeedPresenter {
-    private let feedService : FeedService
+    private let feedService : FeedServiceProtocol
     weak private var feedViewDelegate : FeedViewDelegate?
     
     var feedData : Array<FeedCellModel> = Array()
@@ -17,7 +17,7 @@ class FeedPresenter {
         return feedData.count
     }
     
-    init(feedService : FeedService){
+    init(feedService : FeedServiceProtocol){
         self.feedService = feedService
     }
     
